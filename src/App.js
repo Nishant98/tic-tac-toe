@@ -119,6 +119,10 @@ const App = () => {
             return toast('Already filled', { type: 'error' });
         }
         checkIsWinner();
+        if (!itemArray.includes('empty')) {
+            setWinMessage(`It's a tie`);
+            return toast(`It's a tie`, { type: 'warning' });
+        }
     };
 
     return (
